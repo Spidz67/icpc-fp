@@ -4,7 +4,7 @@ open NUnit.Framework
 open FsUnit
 
 [<Test>]
-let ``Comma sprinkler, input 1`` () = 
+let ``Comma sprinkler, input 1`` () =
     commaSprinkler "please sit spot. sit spot, sit. spot here now here."
     |> should equal (Some "please, sit spot. sit spot, sit. spot, here now, here.")
 
@@ -24,9 +24,9 @@ let ``Comma sprinkler, error case 1`` () =
 
 [<Test>]
 let ``Comma sprinkler, error case 2`` () =
-  //  commaSprinkler "tesT." |> should equal None
-   // commaSprinkler "test" |> should equal None
-    commaSprinkler "to be, or not To be? that is the question." |> should equal None
+    commaSprinkler "tesT." |> should equal None
+    commaSprinkler "test" |> should equal None
+    commaSprinkler "to be, or not to be? that is the question." |> should equal None
 
 [<Test>]
 let ``Comma sprinkler, error case 3`` () =
